@@ -18,4 +18,12 @@ public class Greeting {
     public String getConnect() {
         return connect;
     }
+
+    @Override
+    public String toString() {
+        return "Greeting{" +
+                "id=" + id +
+                ", connect='" + connect + '\'' +
+                '}';
+    }
 }
