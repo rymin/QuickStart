@@ -10,7 +10,4 @@ import java.util.Optional;
 
 public interface CarRepository extends  CrudRepository<Car,Long>{
 
-    List<Car> findAll();
-
-    Optional<Car> findById(Long id);
 }

@@ -4,20 +4,18 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
+@Table(name = "Cars")
 public class Car implements Serializable {
 
     @Id
-    @GeneratedValue
-    @Column(name = "id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "brand")
     private String brand;
 
-    @Column(name = "model")
     private String model;
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
