@@ -1,17 +1,21 @@
 package quickstart.microservises.domain;
 
+import javax.persistence.*;
+import java.io.Serializable;
 
-public class Car {
+@Entity
+public class Car implements Serializable {
 
-    private int id;
+    @Id
+    @GeneratedValue
+    @Column(name = "id")
+    private Long id;
+
+    @Column(name = "brand")
     private String brand;
-    private String model;
 
-    public Car(int id, String brand, String model) {
-        this.id = id;
-        this.brand = brand;
-        this.model = model;
-    }
+    @Column(name = "model")
+    private String model;
 
     public long getId() {
         return id;
@@ -25,7 +29,7 @@ public class Car {
         return model;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
