@@ -1,11 +1,8 @@
 package quickstart.microservises.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import quickstart.microservises.domain.Car;
-import quickstart.microservises.exceptions.AlreadyExistException;
 import quickstart.microservises.exceptions.NotFoundException;
 import quickstart.microservises.repository.CarRepository;
 
