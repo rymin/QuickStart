@@ -4,11 +4,12 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
-@Table(name = "Cars")
+@Table(name = "vehicle")
 public class Car implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(generator = "car_id_seq")
+    @SequenceGenerator(name = "car_id_seq", sequenceName = "car_id_seq", allocationSize = 1)
     private Long id;
 
     private String brand;
